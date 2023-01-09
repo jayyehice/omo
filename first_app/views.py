@@ -10,7 +10,7 @@ def index(request):
     date_dict = {
         'access_records': webpages_list,
     }
-    return render(request, "first_app/index.html", context=date_dict)
+    return render(request, "index.html", context=date_dict)
 
 def two(request):
     return HttpResponse("Two")
