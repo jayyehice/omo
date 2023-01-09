@@ -15,11 +15,19 @@ module.exports = {
                     options: { presets: ['@babel/preset-react'] }
                 }
             },
-            { test: /.js$/, exclude: /node_modules/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } } },
+            {
+                test: /.js$/,
+                exclude: /node_modules/,
+                use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } }
+            },
             {
                 test: /\.css$/i,
                 exclude: /node_modules/,
-                use: ['style-loader', 'css-loader', 'postcss-loader'],
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    'postcss-loader',
+                ],
             },
         ]
     }
