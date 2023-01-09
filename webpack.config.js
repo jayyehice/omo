@@ -1,50 +1,34 @@
-const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-    entry: "./src/js/app.js",
+    entry: "./src/js/index.js",
     output: {
         path: __dirname,
         filename: "./static/js/bundle.js"
     },
     module: {
         rules: [
-            // 編譯 css 檔案設定
+            {
+                test: /.jsx$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: { presets: ['@babel/preset-react'] }
+                }
+            },
+            {
+                test: /.js$/,
+                exclude: /node_modules/,
+                use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } }
+            },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            },
-            {
-                test: /\.s(c|a)ss$/,
+                exclude: /node_modules/,
                 use: [
-                    'vue-style-loader',
-                    'css-loader',
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            implementation: require('sass'),
-                            indentedSyntax: true // optional
-                        },
-                        options: {
-                            implementation: require('sass'),
-                            sassOptions: {
-                                indentedSyntax: true // optional
-                            },
-                        },
-                    },
+                    'style-loader',
+                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    'postcss-loader',
                 ],
             },
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader'
-            }
         ]
-    },
-    resolve: {
-        alias: {
-            vue: 'vue/dist/vue.js'
-        },
-    }, 
-    plugins: [
-        new VueLoaderPlugin()
-    ],
+    }
 };

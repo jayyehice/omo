@@ -1,30 +1,38 @@
-import Vue from 'vue';
-import vuetify from './vuetify';
-import VueRouter from 'vue-router';
-import layout from './components/Layout.vue';
-import productsPage from './components/ProductsPage.vue';
-import login from './components/Login.vue';
-import register from './components/Register.vue';
-import personalManage from './components/PersonalManage.vue';
+import React, { Component } from "react";
+// import { Routes, Route } from "react-router-dom";
 
-Vue.config.productionTip = false;
-Vue.use(VueRouter);
+// import Header from './component/Header/Header';
+// import Home from './component/Home/Home';
+// import Login from './component/Login/Login';
+// import Products from './component/Products/Products';
 
-const routes = [
-    { path: '/', component: productsPage },
-    { path: '/login', component: login },
-    { path: '/register', component: register },
-    { path: '/personalManage', component: personalManage },
-];
+// import DataInput from "./DataInput";
 
-const router = new VueRouter({
-    mode:'history',
-    routes,
-});
+class App extends Component {
 
-new Vue({
-    el: '#app',
-    vuetify,
-    router,
-    components: { layout }
-});
+  state = {
+    productList: [],
+  }
+
+  componentDidMount = () => {
+    // const url = "https://shopping-cart-apis-jay.herokuapp.com/products";
+    // fetch(url)
+    //   .then(res => res.json())
+    //   .then(res => {
+    //     this.setState({
+    //       productList: res.data,
+    //     });
+    //     // console.log(res.data);
+    //   })
+  }
+  render() {
+
+    return (
+      <div>
+        <h1 className="text-3xl font-bold underline">react test</h1>
+      </div>
+    );
+  }
+}
+
+export default App;
