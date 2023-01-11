@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // import { Routes, Route } from "react-router-dom";
 
-// import Header from './component/Header/Header';
-// import Home from './component/Home/Home';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 // import Login from './component/Login/Login';
 // import Products from './component/Products/Products';
 
@@ -29,7 +29,9 @@ class App extends Component {
 
     return (
       <div>
-        <h1 className="text-3xl font-bold underline">react test</h1>
+        <Header />
+        <hr/>
+        <Home />
       </div>
     );
   }

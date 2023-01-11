@@ -21,12 +21,13 @@ module.exports = {
                 use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } }
             },
             {
-                test: /\.css$/i,
+                test: /\.(sass|css|scss)$/,
                 exclude: /node_modules/,
                 use: [
                     'style-loader',
-                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    'css-loader',
                     'postcss-loader',
+                    'sass-loader',
                 ],
             },
         ]
