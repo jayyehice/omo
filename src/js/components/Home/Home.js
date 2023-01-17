@@ -18,16 +18,16 @@ const Home = (props) => {
         <div className="mx-auto w-8/12 mt-5">
             <Slider {...settings} className="mx-auto w-9/12 my-10 shadow-md">
                 <div>
-                    <img src="static/img/slider/slider01.jpg" />
+                    <img src="/static/img/slider/slider01.jpg" />
                 </div>
                 <div>
-                    <img src="static/img/slider/slider02.jpg" />
+                    <img src="/static/img/slider/slider02.jpg" />
                 </div>
                 <div>
-                    <img src="static/img/slider/slider03.jpg" />
+                    <img src="/static/img/slider/slider03.jpg" />
                 </div>
                 <div>
-                    <img src="static/img/slider/slider04.jpg" />
+                    <img src="/static/img/slider/slider04.jpg" />
                 </div>
             </Slider>
 
