@@ -37,12 +37,15 @@ const OMOIntroduction = (props) => {
                         </p>
                     </div>
 
-                    <div className="mt-8 container">
-                        <table className="w-full flex flex-no-wrap sm:bg-white rounded-lg overflow-hidden my-5 justify-center">
+                    <div className="mt-8 container flex">
+                        <table className="w-3/5 flex flex-no-wrap sm:bg-white rounded-lg overflow-hidden my-5 justify-center">
                             <tbody className="flex-1 sm:flex-none p-2">
                                 {infomationList}
                             </tbody>
                         </table>
+                        <div className="w-2/5 flex items-center">
+                            <img src="/static/img/usb/real_ref01_big.jpg" />
+                        </div>
                     </div>
                 </div>
             </section>
