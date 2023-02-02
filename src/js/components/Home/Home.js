@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import ShopLink from '../Common/ShopLink';
 import HotSale from './HotSale';
+import Banner01 from './Banner01';
 
 const Home = (props) => {
     const settings = {
@@ -17,8 +18,8 @@ const Home = (props) => {
         slidesToScroll: 1, // 按下一頁的時候，要跑幾張
     };
     return (
-        <div className="mx-auto w-8/12 mt-5">
-            <Slider {...settings} className="mx-auto w-9/12 my-10 shadow-md">
+        <div className="mt-5">
+            <Slider {...settings} className="mx-auto w-6/12 my-10 shadow-md">
                 <div>
                     <img src="/static/img/slider/slider01.jpg" />
                 </div>
@@ -33,29 +34,19 @@ const Home = (props) => {
                 </div>
             </Slider>
 
-            <hr />
+            <hr className="my-10" />
 
 
+            <Banner01 />
 
-            <section class="banner1">
-                <div class="wrapper">
-                    <img src="/static/img/banner/banner01-1.jpg" alt="" />
-                    <img src="/static/img/banner/banner01-2.png" alt="" />
-                    <div>
-                        <h3>客製禮品</h3>
-                        <h3>為您專屬打造</h3>
-
-                    </div>
-                </div>
-            </section>
-
-            <HotSale />
+            <div className="bg-gray-100">
+                <HotSale />
+            </div>
 
             <section class="banner2">
                 <div class="wrapper">
                     <h3>排版、製作成品</h3>
-                    <h3>一次到位&nbsp;&nbsp;</h3>
-
+                    <h3>一次到位</h3>
                 </div>
             </section>
 

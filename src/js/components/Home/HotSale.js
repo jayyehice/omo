@@ -11,7 +11,7 @@ const HotSale = (props) => {
     const productionList = production_list.map((obj, index) => {
         return (
             <li key={index} className="w-1/4">
-                <a href={obj.link} className="block border border-blue-200 flex flex-col h-full rounded-lg p-3">
+                <a href={obj.link} className="block border border-blue-200 flex flex-col h-full rounded-lg p-5 bg-white">
                     <div className="h-1/2 hover:shadow-lg ease-linear duration-300 flex items-center justify-center grow py-3 mb-3">
                         <img className="w-4/5" src={obj.img} />
                     </div>
@@ -26,8 +26,8 @@ const HotSale = (props) => {
     });
 
     return (
-        <div className="container mx-auto flex items-center flex-wrap pt-10 pb-12">
-            <h2 className="w-full text-4xl">熱銷商品</h2>
+        <div className="container mx-auto flex items-center flex-wrap pt-10 pb-12 w-7/12">
+            <h2 className="w-full text-4xl font-bold text-center"><span class="mdi mdi-fire text-red-600"></span>熱銷商品</h2>
             <ul className="w-full p-6 flex justify-between my-5">
                 {productionList}
             </ul>
