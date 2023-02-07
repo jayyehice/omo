@@ -10,7 +10,7 @@ const ShopLink = (props) => {
 
     const shopList = shop_list.map((obj, index) => {
         return (
-            <li className="w-1/3">
+            <li className="w-1/3" key={index}>
                 <a href={obj.link} target="shop">
                     <div>
                         <img className="mx-auto w-1/2 shadow-lg rounded-[20px] opacity-50 hover:opacity-100 ease-linear duration-300" src={`/static/img/shop/${obj.img}`} alt="" />
@@ -23,7 +23,7 @@ const ShopLink = (props) => {
     return (
 
         <section className="mx-auto lg:w-8/12 md:w-10/12 mb-28">
-            <h2 className="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center pt-16 pb-10"><span class="mdi mdi-store text-orange-600"></span>賣場連結</h2>
+            <h2 className="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center pt-16 pb-10"><span className="mdi mdi-store text-orange-600"></span>賣場連結</h2>
             <ul className="flex justify-between">
                 {shopList}
             </ul>

@@ -26,12 +26,14 @@ const HotSale = (props) => {
     });
 
     return (
-        <div className="container mx-auto flex items-center flex-wrap pt-10 pb-12 w-7/12">
-            <h2 className="w-full text-4xl font-bold text-center"><span class="mdi mdi-fire text-red-600"></span>熱銷商品</h2>
-            <ul className="w-full p-6 flex justify-between my-5">
-                {productionList}
-            </ul>
-            <a className="mx-auto bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" href="./products/">Read More</a>
+        <div className="bg-gray-100">
+            <div className="container mx-auto flex items-center flex-wrap pt-10 pb-12 w-7/12">
+                <h2 className="w-full text-4xl font-bold text-center"><span className="mdi mdi-fire text-red-600"></span>熱銷商品</h2>
+                <ul className="w-full p-6 flex justify-between my-5">
+                    {productionList}
+                </ul>
+                <a className="mx-auto bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" href="./products/">Read More</a>
+            </div>
         </div>
     );
 };

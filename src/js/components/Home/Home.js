@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import ShopLink from '../Common/ShopLink';
 import HotSale from './HotSale';
 import Banner01 from './Banner01';
+import Banner02 from './Banner02';
+import News from './News';
 
 const Home = (props) => {
     const settings = {
@@ -36,51 +38,10 @@ const Home = (props) => {
 
             <hr className="my-10" />
 
-
             <Banner01 />
-
-            <div className="bg-gray-100">
-                <HotSale />
-            </div>
-
-            <section class="banner2">
-                <div class="wrapper">
-                    <h3>排版、製作成品</h3>
-                    <h3>一次到位</h3>
-                </div>
-            </section>
-
-
-            <section class="news">
-                <div class="wrapper">
-                    <div class="subtitle">
-                        <h2>最新消息</h2>
-                    </div>
-
-                    <div class="news_table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>標題</td>
-                                    <td>日期</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>[新品上市]  客製化小夜燈-開始販售</td>
-                                    <td>2022.03.24</td>
-                                </tr>
-                                <tr>
-                                    <td>[促銷活動] 64GB 隨身碟買五送一 </td>
-                                    <td>2022.03.17</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </section>
-
+            <HotSale />
+            <Banner02 />
+            <News />
             <ShopLink />
 
         </div>
