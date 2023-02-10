@@ -65,14 +65,14 @@ const Products = (props) => {
     });
 
     return (
-        <div className="mx-auto w-8/12 mt-5">
+        <div className="mx-auto w-8/12 mt-5 mb-20">
             <div className="container px-6 py-8 mx-auto">
                 <div className="lg:flex lg:-mx-2">
                     <div className="space-y-3 lg:w-1/5 lg:px-2 lg:space-y-4">
                         {productsMenu}
                     </div>
 
-                    <div className="mt-6 lg:mt-0 lg:px-2 lg:w-4/5 ">
+                    <div className="mt-6 lg:mt-0 lg:px-2 lg:w-4/5">
                         <div className="flex items-center justify-between text-sm tracking-widest uppercase ">
                             <p className="text-gray-500 dark:text-gray-300">{products_list.length} Items</p>
                             <div className="flex items-center">
