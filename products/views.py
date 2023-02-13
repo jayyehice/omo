@@ -5,5 +5,8 @@ from django.http import HttpResponse
 def index(request):
     return render(request, "index.html")
 
+def pages(request):
+    return render(request, "index.html")
+
 def intro(request):
     return HttpResponse("intro")
