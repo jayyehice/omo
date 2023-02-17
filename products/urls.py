@@ -1,7 +1,7 @@
-from django.urls import path
+from django.urls import path, re_path
 from products import views
 
 urlpatterns = [
     path("", views.index),
-    path("pages", views.pages),
+    re_path("pages/.*", views.pages),
 ]
