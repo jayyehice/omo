@@ -5,14 +5,14 @@ const Products = (props) => {
 
     const all_products_list = {
         rotation: [
-            { title: '旋轉碟 - 雷射雕刻', mini: 1, type: 'laser', img: '/static/img/products/products01.jpg' },
-            { title: '旋轉碟 - 網版印刷', mini: 100, type: 'screen_print', img: '/static/img/products/products01-03.jpg' },
+            { title: '旋轉碟 - 雷射雕刻', mini: 1, type: 'laser', img: '/static/img/products/products01.jpg', id: 0 },
+            { title: '旋轉碟 - 網版印刷', mini: 100, type: 'screen_print', img: '/static/img/products/products01-03.jpg', id: 0 },
         ],
         aluminum: [
-            { title: '鋁管碟 - 雷射雕刻', mini: 1, type: 'laser', img: '/static/img/products/products02.jpg' },
+            { title: '鋁管碟 - 雷射雕刻', mini: 1, type: 'laser', img: '/static/img/products/products02.jpg', id: 1 },
         ],
         mini: [
-            { title: '迷你碟 - 雷射雕刻', mini: 100, type: 'laser', img: '/static/img/products/products03.jpg' },
+            { title: '迷你碟 - 雷射雕刻', mini: 100, type: 'laser', img: '/static/img/products/products03.jpg', id: 2 },
         ]
     };
 

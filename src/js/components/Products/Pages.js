@@ -11,8 +11,8 @@ const Products = (props) => {
             up_pic: ['/static/img/products/page01.jpg', '/static/img/products/page02.jpg', '/static/img/products/page03.jpg', '/static/img/products/page04.jpg'],
             down_pic: ['/static/img/products/usb/red_white.jpg', '/static/img/products/usb/intro_size.png', '/static/img/products/usb/intro_print_range.png'],
             color: [
-                ['bg-red-600', '紅', 'red'], ['bg-orange-600', '橘', 'orange'], ['bg-yellow-600', '黃', 'yellow'],
-                ['bg-green-600', '綠', 'green'], ['bg-blue-600', '藍', 'blue'], ['bg-pink-600', '粉', 'pink'],
+                ['bg-red-600', '紅', 'red'], ['bg-orange-600', '橘', 'orange'], ['bg-yellow-300', '黃', 'yellow'],
+                ['bg-teal-400', '綠', 'green'], ['bg-blue-600', '藍', 'blue'], ['bg-pink-600', '粉', 'pink'],
                 ['bg-purple-600', '紫', 'purple'], ['bg-black', '黑', 'black'], ['bg-stone-200', '銀', 'silver']
             ],
             shell_color: [['border border-black', '白', '_white'], ['bg-black', '黑', '_black']],
@@ -131,21 +131,21 @@ const Products = (props) => {
                     <div className="my-10">
                         <h2 className="text-4xl mb-10">商品介紹</h2>
                         <div className="flex items-center justify-center">
-                            <div className="flex justify-between w-7/12">
-                                <ul className="w-8/12">
-                                    <li className="flex items-start justify-between mb-3">
+                            <div className="flex justify-between w-8/12">
+                                <ul className="w-6/12">
+                                    <li className="flex items-start justify-between mb-4">
                                         <p className="w-3/12">顏色</p>
                                         <ul className="flex items-center justify-start flex-wrap w-9/12">
                                             {colorButton}
                                         </ul>
                                     </li>
-                                    <li className="flex items-start justify-between mb-3">
+                                    <li className="flex items-start justify-between mb-4">
                                         <p className="w-3/12">底殼</p>
                                         <ul className="flex items-center justify-start flex-wrap w-9/12">
                                             {shellButton}
                                         </ul>
                                     </li>
-                                    <li className="flex items-start justify-between mb-3">
+                                    <li className="flex items-start justify-between mb-4">
                                         <p className="w-3/12">尺寸</p>
                                         <div className="flex items-center justify-start w-9/12">
                                             <p>關閉</p>
@@ -157,7 +157,7 @@ const Products = (props) => {
                                             <p>開啟</p>
                                         </div>
                                     </li>
-                                    <li className="flex items-start justify-between mb-3">
+                                    <li className="flex items-start justify-between mb-4">
                                         <p className="w-3/12">雕刻範圍</p>
                                         <div className="flex items-center justify-start w-9/12">
                                             <p>關閉</p>
@@ -169,7 +169,7 @@ const Products = (props) => {
                                             <p>開啟</p>
                                         </div>
                                     </li>
-                                    <li className="flex items-start justify-between mb-3">
+                                    <li className="flex items-start justify-between mb-4">
                                         <p className="w-3/12">適用包裝</p>
                                         <div className="flex items-center justify-start w-9/12">
                                             <a className="mr-3" href="#">蘋果派盒</a>
@@ -177,7 +177,7 @@ const Products = (props) => {
                                             <a className="mr-3" href="#">PP盒</a>
                                         </div>
                                     </li>
-                                    <li className="flex items-start justify-between mb-3">
+                                    <li className="flex items-start justify-between mb-4">
                                         <p className="w-3/12">印製方式</p>
                                         <div className="flex items-center justify-start w-9/12">
                                             <a className="mr-3" href="#">雷射雕刻</a>
@@ -185,13 +185,13 @@ const Products = (props) => {
                                             <a className="mr-3" href="#">UV直噴</a>
                                         </div>
                                     </li>
-                                    <li className="flex items-start justify-between mb-3">
+                                    <li className="flex items-start justify-between mb-4">
                                         <p className="w-3/12">最低客製數</p>
                                         <div className="flex items-center justify-start w-9/12">
                                             <p>{page_products[id].mini_quantity} pcs</p>
                                         </div>
                                     </li>
-                                    <li className="flex items-start justify-between mb-3">
+                                    <li className="flex items-start justify-between mb-4">
                                         <p className="w-3/12">購買連結</p>
                                         <div className="flex items-center justify-start w-9/12">
                                             <a className="mr-3" href="https://shopee.tw/jayyehice?categoryId=100644&itemId=1814827105" target="shop">蝦皮</a>
@@ -201,7 +201,7 @@ const Products = (props) => {
                                     </li>
                                 </ul>
 
-                                <div className="w-4/12 border relative border">
+                                <div className="w-5/12 border relative border">
                                     {introImg}
                                 </div>
                             </div>
