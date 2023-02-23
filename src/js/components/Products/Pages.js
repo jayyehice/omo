@@ -5,6 +5,8 @@ const Products = (props) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const id = searchParams.get("product");
 
+    (id === null) && (location.href='./?product=0');
+
     const page_products = [
         {
             name: '旋轉碟',
@@ -61,7 +63,7 @@ const Products = (props) => {
     });
 
 
-    
+
     const [intro_img, setIntroImg] = useState(page_products[id].down_pic[0]);
     const [color, setColor] = useState(page_products[id].color[0][2]);
     const [shell_color, setShellColor] = useState(page_products[id].shell_color[0][2]);
@@ -106,19 +108,30 @@ const Products = (props) => {
 
     const introImg = page_products[id].down_pic.map((img, index) => {
         return (
-            <img className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 ease-in duration-300 ${(index === 1) ? size_opacity : ''} ${(index === 2) ? print_size_opacity : ''}` } src={(index === 0)?intro_img:img} alt="" key={index} />
+            <img className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 ease-in duration-300 ${(index === 1) ? size_opacity : ''} ${(index === 2) ? print_size_opacity : ''}`} src={(index === 0) ? intro_img : img} alt="" key={index} />
         )
     });
 
 
     const mayLike = page_products.map((obj, index) => {
         return (
-            <a className={`w-3/12 ml-5 border rounded-[12px] overflow-hidden flex items-center justify-center ${(id == index)?'hidden':''}`} href={`./?product=${index}`} key={index}><img src={obj.up_pic[0]} alt="" /></a>
+            <a className={`w-3/12 ml-5 border rounded-[12px] overflow-hidden flex items-center justify-center ${(id == index) ? 'hidden' : ''}`} href={`./?product=${index}`} key={index}><img src={obj.up_pic[0]} alt="" /></a>
         )
     });
 
     return (
         <main className="mx-auto w-8/12 mt-5 mb-20">
+            <div className="pt-2 text-sm">
+                <nav aria-label="breadcrumb">
+                    <ol className="flex space-x-2">
+                        <li><a href="/" className="after:content-['/'] after:ml-2 text-gray-600 hover:text-purple-700">首頁</a></li>
+                        <li><a href="/products" className="after:content-['/'] after:ml-2 text-gray-600 hover:text-purple-700">產品介紹</a></li>
+                        <li className="text-purple-700" aria-current="page">{page_products[id].name}</li>
+                    </ol>
+                </nav>
+            </div>
+
+
             <div className="flex items-start justify-between">
                 <section className="p-5 w-10/12">
                     <h2 className="text-4xl py-5">{page_products[id].name}</h2>
