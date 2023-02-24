@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-// import Header from './component/Header/Header';
-// import Home from './component/Home/Home';
-// import Login from './component/Login/Login';
-// import Products from './component/Products/Products';
-
-// import DataInput from "./DataInput";
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import Products from './components/Products/Products';
+import Pages from './components/Products/Pages';
 
 class App extends Component {
 
@@ -14,22 +15,23 @@ class App extends Component {
     productList: [],
   }
 
-  componentDidMount = () => {
-    // const url = "https://shopping-cart-apis-jay.herokuapp.com/products";
-    // fetch(url)
-    //   .then(res => res.json())
-    //   .then(res => {
-    //     this.setState({
-    //       productList: res.data,
-    //     });
-    //     // console.log(res.data);
-    //   })
-  }
+  componentDidMount = () => { }
+
   render() {
 
     return (
       <div>
-        <h1 className="text-3xl font-bold underline">react test</h1>
+        <Header />
+        <hr />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact/" element={<Contact />} />
+          <Route path="/about/" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/pages" element={<Pages />} />
+        </Routes>
+
+        <Footer />
       </div>
     );
   }
