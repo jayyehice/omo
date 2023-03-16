@@ -26,7 +26,7 @@ const HotSale = (props) => {
     });
 
     return (
-        <div className="bg-gray-100">
+        <div className="bg-gray-100 anim-fade-in">
             <div className="container mx-auto flex items-center flex-wrap pt-10 pb-12 w-7/12">
                 <h2 className="w-full text-4xl font-bold text-center"><span className="mdi mdi-fire text-red-600"></span>熱銷商品</h2>
                 <ul className="w-full p-6 flex justify-between my-5">
