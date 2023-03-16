@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const Banner01 = (props) => {
     return (
-        <section className="mx-auto w-10/12 my-10">
+        <section className="mx-auto w-10/12 my-10 anim-fade-in">
             <div className="flex items-center justify-center">
                 <img className="max-w-1/2 shadow-lg rounded-lg mr-5" src="/static/img/banner/banner01-1.jpg" alt="" />
                 <div className="max-w-1/2 shadow-lg rounded-lg p-10 bg-gray-200 space-y-10">

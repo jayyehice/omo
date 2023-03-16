@@ -15,7 +15,7 @@ const News = (props) => {
         )
     });
     return (
-        <div className="bg-blue-50 py-5">
+        <div className="bg-blue-50 py-5 anim-fade-in">
             <section className="mx-auto w-10/12 pt-6">
                 <h2 className="w-full text-4xl font-bold text-center"><span className="mdi mdi-information text-blue-600"></span>最新消息</h2>
 
