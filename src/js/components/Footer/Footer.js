@@ -19,12 +19,12 @@ const Footer = (props) => {
     return (
         <footer className="bg-black text-white px-4 lg:px-6 py-8">
             <div className="flex justify-between items-center mx-auto max-w-screen-xl">
-                <a href="/" className="w-1/6 block"><img src="/static/img/omo_logo_white.png" alt="" /></a>
-                <ul className="flex flex-wrap items-center justify-between selection:bg-fuchsia-300 grow mx-36">
+                <a href="/" className="w-1/6 hidden sm:block"><img src="/static/img/omo_logo_white.png" alt="" /></a>
+                <ul className="flex flex-wrap items-center justify-between selection:bg-fuchsia-300 grow sm:mx-36">
                     {contactList}
                 </ul>
 
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center hidden sm:flex">
                     <a href="https://line.me/ti/p/%40fjk2994k" target="_blank" className="mr-3 hover:bg-green-500 rounded-[16px]">
                         <img src="/static/img/icon/line_icon.png" alt="" />
                     </a>
