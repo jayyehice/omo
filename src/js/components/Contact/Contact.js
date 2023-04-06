@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ShopLink from '../Common/ShopLink';
+import axios from "axios";
 
 const Contact = (props) => {
 
@@ -23,9 +24,9 @@ const Contact = (props) => {
     });
 
     let input_content = [
-        { name: '姓', id: 'first-name', autocomplete: 'family-name' },
-        { name: '名', id: 'last-name', autocomplete: 'given-name' },
-        { name: '電話', id: 'phone', autocomplete: 'tel' },
+        { name: '姓', id: 'first_name', autocomplete: 'family-name' },
+        { name: '名', id: 'last_name', autocomplete: 'given-name' },
+        { name: '電話', id: 'tel', autocomplete: 'tel' },
         { name: 'Email', id: 'email', autocomplete: 'email' },
 
     ];
@@ -38,6 +39,25 @@ const Contact = (props) => {
             </div>
         )
     });
+
+    const sendData = async () => {
+        try {
+            const Data = await axios.get('https://script.google.com/macros/s/AKfycbxWHLeIt0mWClRHRtRbNVpVoZAdUe73q4KuJnr3fuyx2yuZZWBeghpZyE-1W2KUgn8zyw/exec', {
+                params: {
+                    first_name: '崇杰',
+                    last_name: '葉',
+                    email: 'jayyehice@gmail.com',
+                    tel: '0914119520',
+                    content: 'test'
+                }
+            });
+            alert("新增成功!!!");
+        }
+        catch (error) {
+            alert("GET Error!!");
+            console.log(error);
+        }
+    };
 
     return (
         <main className="mt-5">
@@ -54,19 +74,19 @@ const Contact = (props) => {
             <section className="bg-gray-100 pb-20">
                 <h2 className="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center py-10">聯絡我們</h2>
                 <div className="mx-auto  mt-5 md:col-span-2 md:mt-0 lg:w-8/12 md:w-10/12" >
-                    <form action="#" method="POST">
+                    <form action="#" method="GET">
                         <div className="overflow-hidden shadow sm:rounded-md">
                             <div className="bg-white px-4 py-5 sm:p-6">
                                 <div className="grid grid-cols-6 gap-6">
                                     {inputContent}
                                     <div className="col-span-12 sm:col-span-6">
-                                        <label htmlFor="message" className="block font-medium text-gray-700 mb-2">留言內容</label>
-                                        <textarea className="w-full shadow p-2" name="message" rows="10"></textarea>
+                                        <label htmlFor="content" className="block font-medium text-gray-700 mb-2">留言內容</label>
+                                        <textarea className="w-full shadow p-2" name="content" rows="10"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
-                                <button type="button" className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">送出</button>
+                                <button type="button" onClick={sendData} className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">送出</button>
                             </div>
                         </div>
                     </form>

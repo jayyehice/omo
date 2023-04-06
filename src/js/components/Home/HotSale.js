@@ -3,9 +3,9 @@ import React, { Component } from "react";
 const HotSale = (props) => {
 
     let production_list = [
-        { title: '旋轉碟', content: '多款顏色、隨興搭配', img: '/static/img/hot_sale/hot_sale_1.jpg', link: '#' },
-        { title: '鋁管碟', content: '品質卓越、提升形象', img: '/static/img/hot_sale/hot_sale_2.jpg', link: '#' },
-        { title: '迷你碟', content: '超小體積、方便攜帶', img: '/static/img/hot_sale/hot_sale_3.jpg', link: '#' },
+        { title: '旋轉碟', content: '多款顏色、隨興搭配', img: '/static/img/hot_sale/hot_sale_1.jpg', link: '/products/pages/?product=0' },
+        { title: '鋁管碟', content: '品質卓越、提升形象', img: '/static/img/hot_sale/hot_sale_2.jpg', link: '/products/pages/?product=1' },
+        { title: '迷你碟', content: '超小體積、方便攜帶', img: '/static/img/hot_sale/hot_sale_3.jpg', link: '/products/pages/?product=2' },
     ];
 
     const productionList = production_list.map((obj, index) => {
