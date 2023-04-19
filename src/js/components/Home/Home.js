@@ -56,7 +56,7 @@ const Home = (props) => {
     
     return (
         <div className="mt-5" ref={main}>
-            <Slider {...settings} className="mx-auto w-6/12 my-10 shadow-md">
+            <Slider {...settings} className="mx-auto w-11/12 my-10 shadow-md lg:w-6/12">
                 <div>
                     <img src="/static/img/slider/slider01.jpg" />
                 </div>

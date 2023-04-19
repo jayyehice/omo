@@ -10,10 +10,10 @@ const ShopLink = (props) => {
 
     const shopList = shop_list.map((obj, index) => {
         return (
-            <li className="w-1/3" key={index}>
+            <li className="w-full sm:w-1/3" key={index}>
                 <a href={obj.link} target="shop">
                     <div>
-                        <img className="mx-auto w-1/2 shadow-lg rounded-[20px] opacity-50 hover:opacity-100 ease-linear duration-300" src={`/static/img/shop/${obj.img}`} alt="" />
+                        <img className="mx-auto w-10/12 sm:w-1/2 shadow-lg rounded-[20px] opacity-50 hover:opacity-100 ease-linear duration-300" src={`/static/img/shop/${obj.img}`} alt="" />
                     </div>
                 </a>
             </li>
