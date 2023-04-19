@@ -84,9 +84,9 @@ const Contact = (props) => {
         <main className="mt-5">
             <section className="mx-auto lg:w-8/12 md:w-10/12 mb-10">
                 <h4 className="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center py-10">鋐隆精工有限公司</h4>
-                <div className="flex justify-between mx-auto lg:w-3/4 md:w-full">
-                    <iframe className="grow hidden sm:block" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14461.818159366014!2d121.57024!3d25.0186441!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6df07ead1fedf392!2z6YuQ6ZqG57K-5bel5pyJ6ZmQ5YWs5Y-4LeawtOWIhuWtkOWKqeeHg-WZqA!5e0!3m2!1szh-TW!2stw!4v1649816529871!5m2!1szh-TW!2stw"></iframe>
-                    <ul className="ml-10 grow space-y-3">
+                <div className="md:flex md:justify-between mx-auto lg:w-3/4 md:w-full">
+                    <iframe className="md:grow w-full md:w-auto p-3 md:p-0 h-[300px] md:h-auto" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14461.818159366014!2d121.57024!3d25.0186441!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6df07ead1fedf392!2z6YuQ6ZqG57K-5bel5pyJ6ZmQ5YWs5Y-4LeawtOWIhuWtkOWKqeeHg-WZqA!5e0!3m2!1szh-TW!2stw!4v1649816529871!5m2!1szh-TW!2stw"></iframe>
+                    <ul className="ml-10 md:grow space-y-3">
                         {infomationList}
                     </ul>
                 </div>
@@ -94,7 +94,7 @@ const Contact = (props) => {
 
             <section className="bg-gray-100 pb-20">
                 <h2 className="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center py-10">聯絡我們</h2>
-                <div className="mx-auto  mt-5 md:col-span-2 md:mt-0 lg:w-8/12 md:w-10/12" >
+                <div className="mx-auto md:mt-5 md:col-span-2 md:mt-0 lg:w-8/12 md:w-10/12" >
                     <form action="#" method="GET">
                         <div className="overflow-hidden shadow sm:rounded-md">
                             <div className="bg-white px-4 py-5 sm:p-6">

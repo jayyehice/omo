@@ -49,7 +49,7 @@ const Products = (props) => {
     const productsMenu = products_menu.map((obj, index) => {
         return (
             <h4
-                className="block font-medium text-gray-500 dark:text-gray-300 cursor-pointer"
+                className="block shadow-md sm:shadow-none sm:text-center mr-2 p-2 sm:p-0 font-medium text-gray-500 dark:text-gray-300 cursor-pointer"
                 key={index}
                 data-product={obj.product}
                 onClick={chooseProductClick}>
@@ -68,7 +68,7 @@ const Products = (props) => {
         <div className="mx-auto w-8/12 mt-5 mb-20">
             <div className="container px-6 py-8 mx-auto">
                 <div className="lg:flex lg:-mx-2">
-                    <div className="space-y-3 lg:w-1/5 lg:px-2 lg:space-y-4">
+                    <div className="sm:space-y-3 lg:w-1/5 lg:px-2 lg:space-y-4 flex justify-center sm:block">
                         {productsMenu}
                     </div>
 
