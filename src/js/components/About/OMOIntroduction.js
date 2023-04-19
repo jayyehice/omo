@@ -11,14 +11,14 @@ const OMOIntroduction = (props) => {
     ];
     const infomationList = infomation_list.map((obj) => {
         return (
-            <tr className="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0" key={obj.index}>
+            <tr className="sm:flex sm:flex-col sm:table-row mb-2 sm:mb-0" key={obj.index}>
                 <td className="border-grey-light border hover:bg-gray-100 p-3">{obj.title}</td>
-                <td className="border-grey-light border hover:bg-gray-100 p-3 truncate">{obj.content}</td>
+                <td className="border-grey-light border hover:bg-gray-100 p-3">{obj.content}</td>
             </tr>
         )
     });
     return (
-        <div className="bg-white p-4 rounded-lg shadow py-8 mt-12">
+        <div className="bg-white sm:p-4 rounded-lg shadow py-8 mt-12">
 
             <section>
                 <h4 className="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center">關於OMO</h4>
@@ -30,20 +30,20 @@ const OMOIntroduction = (props) => {
                             鋐隆精工有限公司組織了一個獨特及創新的研發團隊，在市場上提供高品質的 USB 連接器系列產品，為了滿足客戶的各種需求，更致力創造更加優越的產品。此外，我們能幫助客戶創造出有競爭力的價格和市場的發展，願意與客戶和​​合作夥伴 分享相關的市場信息及策略，以達到雙贏的局面。
                         </p>
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-4 hidden sm:block">
                         <p>
                             Omo Co., Ltd. established in February 1988, is a professional connector provider. To expand the market scale, the 3C products have been released in 2005. The 3C applications products are Flash peripherals, Blue Tooth and multimedia products. The company was founded byMr. Clark Yeh and headquartered in Taipei City , Taiwan . Management team is formed with senior professionals who have more than 20 years field experiences.
                             With a distinctive and innovative R&D team, Omo offers the high quality USB and connector series products in the market. In order to meet various needs from customers, Omo is committed creating more superior products in our product lines. Also, Omo is willing to help customers to have competitive in price and market development. To gain the win-win-win business, Omo will like to share all market information and strategies with customers and partners.
                         </p>
                     </div>
 
-                    <div className="mt-8 container flex">
-                        <table className="w-3/5 flex flex-no-wrap sm:bg-white rounded-lg overflow-hidden my-5 justify-center">
-                            <tbody className="flex-1 sm:flex-none p-2">
+                    <div className="mt-8 container lg:flex">
+                        <table className="lg:w-3/5 sm:flex sm:flex-no-wrap sm:bg-white rounded-lg overflow-hidden my-5 justify-center">
+                            <tbody className="flex-1 lg:flex-none p-2">
                                 {infomationList}
                             </tbody>
                         </table>
-                        <div className="w-2/5 flex items-center">
+                        <div className="w-2/5 flex items-center hidden lg:block">
                             <img src="/static/img/usb/real_ref01_big.jpg" />
                         </div>
                     </div>
